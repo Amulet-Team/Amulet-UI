@@ -145,42 +145,53 @@ class BaseEditCanvas(EventCanvas):
             yield 0.1, lang.get(
                 "program_3d_edit.canvas.downloading_java_vanilla_resource_pack"
             )
-            gen = get_java_vanilla_latest_iter()
-            try:
-                while True:
-                    yield next(gen) * 0.4 + 0.1
-            except StopIteration as e:
-                packs.append(e.value)
-            except Exception as e:
-                if sys.platform == "darwin" and "CERTIFICATE_VERIFY_FAILED" in str(e):
-                    msg = lang.get(
-                        "program_3d_edit.canvas.java_rp_failed_mac_certificates"
-                    )
-                else:
-                    msg = lang.get("program_3d_edit.canvas.java_rp_failed_default")
-                log.error(
-                    msg,
-                    exc_info=True,
-                )
-                wait = True
-
-                def show_error():
-                    nonlocal wait
-                    try:
-                        dialog = TracebackDialog(
-                            self,
-                            lang.get("program_3d_edit.canvas.java_rp_failed"),
-                            f"{msg}\n{e}",
-                            traceback.format_exc(),
+            while True:
+                gen = get_java_vanilla_latest_iter()
+                try:
+                    while True:
+                        yield next(gen) * 0.4 + 0.1
+                except StopIteration as e:
+                    packs.append(e.value)
+                    break
+                except Exception as e:
+                    if sys.platform == "darwin" and "CERTIFICATE_VERIFY_FAILED" in str(e):
+                        msg = lang.get(
+                            "program_3d_edit.canvas.java_rp_failed_mac_certificates"
                         )
-                        dialog.ShowModal()
-                        dialog.Destroy()
-                    finally:
-                        wait = False
+                    else:
+                        msg = lang.get("program_3d_edit.canvas.java_rp_failed_default")
+                    log.error(
+                        msg,
+                        exc_info=True,
+                    )
+                    wait = True
+                    tb = traceback.format_exc()
 
-                wx.CallAfter(show_error)
-                while wait:
-                    time.sleep(0.1)
+                    def show_error():
+                        nonlocal wait
+                        try:
+                            dialog = TracebackDialog(
+                                self,
+                                lang.get("program_3d_edit.canvas.java_rp_failed"),
+                                f"{msg}\n{e}",
+                                tb,
+                            )
+                            dialog.ShowModal()
+                            dialog.Destroy()
+                        finally:
+                            wait = False
+
+                    wx.CallAfter(show_error)
+                    while wait:
+                        time.sleep(0.1)
+
+                    msg = wx.MessageDialog(
+                        self,
+                        lang.get("program_3d_edit.canvas.retry_download"),
+                        style=wx.YES_NO,
+                    )
+                    if msg.ShowModal() == wx.ID_NO:
+                        break
 
             yield 0.5, lang.get("program_3d_edit.canvas.loading_resource_packs")
             packs += [pack for pack in user_packs if isinstance(pack, JavaResourcePack)]

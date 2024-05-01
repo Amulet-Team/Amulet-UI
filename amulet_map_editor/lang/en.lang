@@ -143,6 +143,7 @@ program_3d_edit.canvas.java_rp_failed=Failed to download the latest Java resourc
 program_3d_edit.canvas.java_rp_failed_default=Check your internet connection and restart Amulet.
 program_3d_edit.canvas.java_rp_failed_mac_certificates=The certificates to access the internet were not installed.\nRun the "Install Certificates.command" program that can be found in "Applications/Python 3.x".
 program_3d_edit.canvas.loading_resource_packs=Loading resource packs
+program_3d_edit.canvas.retry_download=Failed to download the resource pack. Do you want to retry?
 program_3d_edit.canvas.creating_texture_atlas=Creating texture atlas
 program_3d_edit.canvas.setting_up_renderer=Setting up renderer
 

@@ -1,9 +1,8 @@
 from typing import Optional
 import logging
-import sys
 
 import wx
-from wx import glcanvas
+from wx.glcanvas import GLCanvas, GLAttributes, GLContext, GLContextAttrs
 from OpenGL.GL import (
     GL_DEPTH_TEST,
     glEnable,
@@ -29,8 +28,8 @@ Objects that need to bind textures or data should do so in the draw function so 
 """
 
 
-class BaseCanvas(glcanvas.GLCanvas):
-    _context: Optional[glcanvas.GLContext]
+class BaseCanvas(GLCanvas):
+    _context: Optional[GLContext]
 
     def __init__(self, parent: wx.Window):
         """
@@ -38,7 +37,7 @@ class BaseCanvas(glcanvas.GLCanvas):
         No OpenGL interaction should be done here.
         OpenGL initialisation should be done in _init_opengl which is run after the window is first shown.
         """
-        display_attributes = glcanvas.GLAttributes()
+        display_attributes = GLAttributes()
         display_attributes.PlatformDefaults().MinRGBA(8, 8, 8, 8).DoubleBuffer().Depth(
             24
         ).EndList()
@@ -48,28 +47,35 @@ class BaseCanvas(glcanvas.GLCanvas):
             size=parent.GetClientSize(),
             style=wx.WANTS_CHARS,
         )
-        if sys.platform == "darwin":
-            # This is required for MacOS. Amulet-Team/Amulet-Map-Editor#597
-            context_attributes = wx.glcanvas.GLContextAttrs()
-            context_attributes.CoreProfile().Robust().ResetIsolation().EndList()
-            self._context = glcanvas.GLContext(
-                self, ctxAttrs=context_attributes
-            )  # setup the OpenGL context
-        else:
-            # This is required for linux and windows.
-            # Amulet-Team/Amulet-Map-Editor#84
-            # Amulet-Team/Amulet-Map-Editor#856
-            self._context = glcanvas.GLContext(self)
 
-        if not self._context.IsOK():
+        # Amulet-Team/Amulet-Map-Editor#84
+        # Amulet-Team/Amulet-Map-Editor#597
+        # Amulet-Team/Amulet-Map-Editor#856
+        context_constructors = [
+            lambda: GLContext(
+                self,
+                ctxAttrs=GLContextAttrs().PlatformDefaults().OGLVersion(3, 3).CoreProfile().EndList()
+            ),
+            lambda: GLContext(
+                self,
+                ctxAttrs=GLContextAttrs().PlatformDefaults().OGLVersion(2, 1).CompatibilityProfile().EndList()
+            )
+        ]
+
+        for constructor in context_constructors:
+            context = constructor()
+            if context.IsOK():
+                break
+        else:
             raise Exception(f"Failed setting up context")
 
+        self._context = context
         self._init = False
 
         self.Bind(wx.EVT_SHOW, self._on_show)
 
     @property
-    def context(self) -> glcanvas.GLContext:
+    def context(self) -> GLContext:
         return self._context
 
     @property

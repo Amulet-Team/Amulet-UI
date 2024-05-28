@@ -54,12 +54,20 @@ class BaseCanvas(GLCanvas):
         context_constructors = [
             lambda: GLContext(
                 self,
-                ctxAttrs=GLContextAttrs().PlatformDefaults().OGLVersion(3, 3).CoreProfile().EndList()
+                ctxAttrs=GLContextAttrs()
+                .PlatformDefaults()
+                .OGLVersion(3, 3)
+                .CoreProfile()
+                .EndList(),
             ),
             lambda: GLContext(
                 self,
-                ctxAttrs=GLContextAttrs().PlatformDefaults().OGLVersion(2, 1).CompatibilityProfile().EndList()
-            )
+                ctxAttrs=GLContextAttrs()
+                .PlatformDefaults()
+                .OGLVersion(2, 1)
+                .CompatibilityProfile()
+                .EndList(),
+            ),
         ]
 
         for constructor in context_constructors:

@@ -54,6 +54,11 @@ class AmuletMainMenu(wx.Panel, BasePageUI):
         self._discord_button.Bind(wx.EVT_BUTTON, self._discord)
         sizer.Add(self._discord_button, 0, wx.ALL | wx.CENTER, 5)
 
+        self._sponsor_button = wx.Button(self, size=(400, 70))
+        self._sponsor_button.SetFont(button_font)
+        self._sponsor_button.Bind(wx.EVT_BUTTON, self._sponsor)
+        sizer.Add(self._sponsor_button, 0, wx.ALL | wx.CENTER, 5)
+
         sizer.AddStretchSpacer(2)
 
         self._lang_button = wx.BitmapButton(
@@ -69,6 +74,7 @@ class AmuletMainMenu(wx.Panel, BasePageUI):
         self._open_world_button.SetLabel(lang.get("main_menu.open_world"))
         self._user_manual_button.SetLabel(lang.get("main_menu.user_manual"))
         self._user_manual_button.SetToolTip(lang.get("app.browser_open_tooltip"))
+        self._sponsor_button.SetLabel(lang.get("main_menu.sponsor"))
         self._bug_tracker_button.SetLabel(lang.get("main_menu.bug_tracker"))
         self._bug_tracker_button.SetToolTip(lang.get("app.browser_open_tooltip"))
         self._discord_button.SetLabel(lang.get("main_menu.discord"))
@@ -89,6 +95,10 @@ class AmuletMainMenu(wx.Panel, BasePageUI):
     @staticmethod
     def _discord(_):
         webbrowser.open("https://www.amuletmc.com/discord")
+
+    @staticmethod
+    def _sponsor(_):
+        webbrowser.open("https://github.com/sponsors/Amulet-Team")
 
     def enable(self):
         self.GetTopLevelParent().create_menu()

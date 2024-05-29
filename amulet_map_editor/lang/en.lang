@@ -78,6 +78,7 @@ menu_bar.help.menu_name=&Help
 main_menu.tab_name=Main Menu
 main_menu.open_world=Open World
 main_menu.user_manual=User Manual
+main_menu.sponsor=Support Us
 main_menu.bug_tracker=Bug Tracker
 main_menu.discord=Amulet Discord
 

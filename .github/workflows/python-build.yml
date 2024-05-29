@@ -63,11 +63,7 @@ jobs:
         twine upload dist/amulet[_-]map[_-]editor* --skip-existing
 
     - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./dist/${{ env.BUILT_PATH }}
-        asset_name: ${{ env.BUILT_PATH }}
-        asset_content_type: application/zip
+        GITHUB_TOKEN: ${{ github.TOKEN }}
+      run: |
+        gh release upload ${{github.event.release.tag_name}} ./dist/${{env.BUILT_PATH}}#${{env.BUILT_PATH}}

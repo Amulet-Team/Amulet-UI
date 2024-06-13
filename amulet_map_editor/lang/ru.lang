@@ -57,76 +57,77 @@ meta.amulet=Amulet
 shared.check_console=Проверьте консоль для получения более подробной информации.
 
 # Приложение
-app.world_still_used=Мир все ещё используется. Пожалуйста, сначала закройте его
 app.browser_open_tooltip=При нажатии откроется страница в браузере
-
-world.java_platform=Java
+app.world_still_used=Мир все ещё используется. Пожалуйста, сначала закройте его
 world.bedrock_platform=Bedrock
 world.close_world=Закрыть мир
+world.java_platform=Java
 
 # Строка меню
 ## Меню, отображаемое в верхней части экрана
+menu_bar.file.close_world=Закрыть мир
 menu_bar.file.menu_name=&Файл
 menu_bar.file.open_world=Открыть мир
-menu_bar.file.close_world=Закрыть мир
 menu_bar.file.quit=Выйти
-menu_bar.options.menu_name=&Параметры
 menu_bar.help.menu_name=&Помощь
+menu_bar.options.menu_name=&Параметры
 
 # Главное меню
 ## Стартовый экран
-main_menu.tab_name=Главное меню
-main_menu.open_world=Открыть мир
-main_menu.user_manual=Руководство пользователя
 main_menu.bug_tracker=Отслеживание ошибок
 main_menu.discord=Amulet Discord
+main_menu.open_world=Открыть мир
+main_menu.our_sponsors=Наши спонсоры:
+main_menu.sponsor_link=(Станьте нашим спонсором, чтобы ваше имя появилось здесь)
+main_menu.tab_name=Главное меню
+main_menu.user_manual=Руководство пользователя
 
 # Выбор языка
-language_select.title=Выбор языка
-language_select.help=Выберите язык для использования в Amulet из списка ниже.
 language_select.contribute=Если вы хотите исправить или добавить перевод, нажмите здесь.
+language_select.help=Выберите язык для использования в Amulet из списка ниже.
+language_select.title=Выбор языка
 
 # Диалог предупреждения
-warning_dialog.title=Добро пожаловать в Amulet
 warning_dialog.content=Здравствуйте и добро пожаловать в Amulet.\n\nМы рекомендуем создавать резервные копии ваших миров, прежде чем открывать их в Amulet.\n\nМы стараемся сделать так, чтобы Amulet не повреждал миры, но формат сохранения не документирован и постоянно меняется, и иногда мы просто ошибаемся.\n\nПо этим причинам мы официально поддерживаем только полные версии, которые мы протестировали.\nJava snapshot-ы, бета-версии Bedrock и экспериментальные функции могут работать, но они не протестированы и не поддерживаются официально.\n\nВ настоящее время сущности не поддерживаются, а элементы поддерживаются только в пределах одной платформы.\nЕсли вы нашли функцию, которую хотите добавить, или ошибку, которую нужно исправить, сообщите о ней в нашем баг-трекере.\nПрежде чем создавать новый запрос, воспользуйтесь инструментом поиска, чтобы узнать, сообщалось ли о нем ранее.\n\nЕсли вы новичок, мы рекомендуем прочитать руководство пользователя, чтобы ознакомиться с программой.\n\n- Команда Amulet
 warning_dialog.do_not_show_again=Не показывайте это снова
 warning_dialog.i_understand=Я понимаю
+warning_dialog.title=Добро пожаловать в Amulet
 
 # Проверка обновлений
 ## Окно, отображаемое при появлении более новой версии Amulet
-update_check.newer_version_released=Вышла новая версия Amulet!
-update_check.new_version=Новая версия:
 update_check.current_version=Ваша версия:
-update_check.update=Перейти на страницу скачивания
+update_check.new_version=Новая версия:
+update_check.newer_version_released=Вышла новая версия Amulet!
 update_check.ok=Окей
+update_check.update=Перейти на страницу скачивания
 
 # Выберите мир
 ## Окно при выборе мира для открытия
-select_world.title=Выбор мира
-select_world.open_world_warning=Закройте мир в игре и другие инструменты перед открытием в Amulet.
+select_world.loading_world_failed=Ошибка загрузки мира.
+select_world.no_loader_found=Не удалось найти загрузчик для этого мира.
 select_world.open_world_button=Открыть другой мир
 select_world.open_world_dialogue=Выберите папку мира Minecraft
-select_world.select_directory_failed=Не удалось открыть папку!
+select_world.open_world_warning=Закройте мир в игре и другие инструменты перед открытием в Amulet.
 select_world.recent_worlds=Недавно открытые миры
-select_world.no_loader_found=Не удалось найти загрузчик для этого мира.
-select_world.loading_world_failed=Ошибка загрузки мира.
+select_world.select_directory_failed=Не удалось открыть папку!
+select_world.title=Выбор мира
 
 # Дополнительно
 ## Программа по умолчанию при открытии мира
-program_about.tab_name=Дополнительно
-program_about.currently_opened_world=Текущий открытый мир:
 program_about.choose_from_options=Выберите из предложенных слева вариантов то, что вы хотите сделать.\nВы можете переключаться между ними в любое время.
+program_about.currently_opened_world=Текущий открытый мир:
+program_about.tab_name=Дополнительно
 
 # Преобразование
 ## Программа, используемая для преобразования мира
-program_convert.tab_name=Преобразовать
+program_convert.conversion_completed=Преобразование мира завершено
 program_convert.convert_button=Преобразовать
+program_convert.input_output_must_different=Входной и выходной миры должны быть разными!
 program_convert.input_world=Исходный мир:
 program_convert.output_world=Выходной мир:
-program_convert.select_output_world=Выберите выходной мир
-program_convert.input_output_must_different=Входной и выходной миры должны быть разными!
 program_convert.select_before_converting=Выберите мир перед преобразованием!
-program_convert.conversion_completed=Преобразование мира завершено
+program_convert.select_output_world=Выберите выходной мир
+program_convert.tab_name=Преобразовать
 
 ## Панель меню
 program_convert.menu_bar.help.user_guide=Руководство пользователя (онлайн)
@@ -135,53 +136,34 @@ program_convert.menu_bar.help.user_guide=Руководство пользова
 ## Программа, используемая для редактирования мира с помощью 3D-просмотрщика
 program_3d_edit.tab_name=3D-редактор
 
-## Canvas
-program_3d_edit.canvas.please_wait=Пожалуйста, подождите, пока рендерер загрузится
+## Сообщения при загрузке мира
+program_3d_edit.canvas.creating_texture_atlas=Создание атласа текстур
 program_3d_edit.canvas.downloading_bedrock_vanilla_resource_pack=Загрузка ванильного ресурсного пакета Bedrock
 program_3d_edit.canvas.downloading_java_vanilla_resource_pack=Загрузка ванильного ресурсного пакета Java
 program_3d_edit.canvas.java_rp_failed=Не удалось загрузить последний пакет ресурсов Java.
 program_3d_edit.canvas.java_rp_failed_default=Проверьте подключение к Интернету и перезапустите Amulet.
 program_3d_edit.canvas.java_rp_failed_mac_certificates=Сертификаты для доступа в интернет не были установлены.\nЗапустите программу "Install Certificates.command", которую можно найти в "Applications/Python 3.x".
 program_3d_edit.canvas.loading_resource_packs=Загрузка пакетов ресурсов
-program_3d_edit.canvas.creating_texture_atlas=Создание атласа текстур
+program_3d_edit.canvas.please_wait=Пожалуйста, подождите, пока рендерер загрузится
+program_3d_edit.canvas.retry_download=Не удалось загрузить пакет ресурсов. Хотите повторить попытку?
 program_3d_edit.canvas.setting_up_renderer=Настройка рендеринга
 
 ## Панель меню
-program_3d_edit.menu_bar.file.save=Сохранить
-program_3d_edit.menu_bar.edit.menu_name=&Правка
-program_3d_edit.menu_bar.edit.undo=Отменить
-program_3d_edit.menu_bar.edit.redo=Вернуть
-program_3d_edit.menu_bar.edit.cut=Вырезать
 program_3d_edit.menu_bar.edit.copy=Копировать
-program_3d_edit.menu_bar.edit.paste=Вставить
+program_3d_edit.menu_bar.edit.cut=Вырезать
 program_3d_edit.menu_bar.edit.delete=Удалить блоки
 program_3d_edit.menu_bar.edit.goto=Перейти
+program_3d_edit.menu_bar.edit.menu_name=&Правка
+program_3d_edit.menu_bar.edit.paste=Вставить
+program_3d_edit.menu_bar.edit.redo=Вернуть
 program_3d_edit.menu_bar.edit.select_all=Выбрать всё
+program_3d_edit.menu_bar.edit.undo=Отменить
+program_3d_edit.menu_bar.file.save=Сохранить
+program_3d_edit.menu_bar.help.user_guide=Руководство пользователя (онлайн)
 program_3d_edit.menu_bar.options.controls=Управление...
 program_3d_edit.menu_bar.options.options=Параметры...
-program_3d_edit.menu_bar.help.user_guide=Руководство пользователя (онлайн)
 
 ## Инструмент выбора
-program_3d_edit.select_tool.delete_button=Удалить блоки
-program_3d_edit.select_tool.delete_button_tooltip=Удалить блоки в выделенной области.
-program_3d_edit.select_tool.copy_button=Копировать
-program_3d_edit.select_tool.copy_button_tooltip=Копирование выделенной области для последующей вставки. Можно вставить в любой мир и измерение.
-program_3d_edit.select_tool.cut_button=Вырезать
-program_3d_edit.select_tool.cut_button_tooltip=Копирование выделенной области для последующей вставки и удаления. Может быть вставлена в любой мир и измерение.
-program_3d_edit.select_tool.paste_button=Вставить
-program_3d_edit.select_tool.paste_button_tooltip=Вставить ранее скопированную или вырезанную область в мир.
-program_3d_edit.select_tool.scroll_point_x1=x1
-program_3d_edit.select_tool.scroll_point_y1=y1
-program_3d_edit.select_tool.scroll_point_z1=z1
-program_3d_edit.select_tool.scroll_point_x2=x2
-program_3d_edit.select_tool.scroll_point_y2=y2
-program_3d_edit.select_tool.scroll_point_z2=z2
-program_3d_edit.select_tool.scroll_point_x1_tooltip=Установите координату x зелёного угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
-program_3d_edit.select_tool.scroll_point_y1_tooltip=Установите координату y зеленого угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
-program_3d_edit.select_tool.scroll_point_z1_tooltip=Установите координату z зеленого угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
-program_3d_edit.select_tool.scroll_point_x2_tooltip=Установите координату x синего угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
-program_3d_edit.select_tool.scroll_point_y2_tooltip=Установите координату y синего угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
-program_3d_edit.select_tool.scroll_point_z2_tooltip=Установите координату z синего угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
 program_3d_edit.select_tool.box_size_selector_fstring=dx={x},dy={y},dz={z}
 program_3d_edit.select_tool.box_size_selector_tooltip=Форма активного выделения с использованием обозначения селектора объема в Minecraft.
 program_3d_edit.select_tool.box_size_tooltip=Размер активного поля выбора в блоках.
@@ -191,8 +173,38 @@ program_3d_edit.select_tool.button_point2=Переместить точку 2
 program_3d_edit.select_tool.button_point2_tooltip=Нажмите и удерживайте эту кнопку и используйте элементы управления перемещением для перемещения синей точки выделения.
 program_3d_edit.select_tool.button_selection_box=Переместить поле
 program_3d_edit.select_tool.button_selection_box_tooltip=Нажмите и удерживайте эту кнопку и используйте элементы управления движением для перемещения активного поля.
+program_3d_edit.select_tool.copy_button=Копировать
+program_3d_edit.select_tool.copy_button_tooltip=Копирование выделенной области для последующей вставки. Можно вставить в любой мир и измерение.
+program_3d_edit.select_tool.cut_button=Вырезать
+program_3d_edit.select_tool.cut_button_tooltip=Копирование выделенной области для последующей вставки и удаления. Может быть вставлена в любой мир и измерение.
+program_3d_edit.select_tool.delete_button=Удалить блоки
+program_3d_edit.select_tool.delete_button_tooltip=Удалить блоки в выделенной области.
+program_3d_edit.select_tool.paste_button=Вставить
+program_3d_edit.select_tool.paste_button_tooltip=Вставить ранее скопированную или вырезанную область в мир.
+program_3d_edit.select_tool.scroll_point_x1=x1
+program_3d_edit.select_tool.scroll_point_x1_tooltip=Установите координату x зелёного угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
+program_3d_edit.select_tool.scroll_point_x2=x2
+program_3d_edit.select_tool.scroll_point_x2_tooltip=Установите координату x синего угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
+program_3d_edit.select_tool.scroll_point_y1=y1
+program_3d_edit.select_tool.scroll_point_y1_tooltip=Установите координату y зеленого угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
+program_3d_edit.select_tool.scroll_point_y2=y2
+program_3d_edit.select_tool.scroll_point_y2_tooltip=Установите координату y синего угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
+program_3d_edit.select_tool.scroll_point_z1=z1
+program_3d_edit.select_tool.scroll_point_z1_tooltip=Установите координату z зеленого угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
+program_3d_edit.select_tool.scroll_point_z2=z2
+program_3d_edit.select_tool.scroll_point_z2_tooltip=Установите координату z синего угла активного поля. Введите число или прокрутите колесо прокрутки при наведении.
 
 ## Инструмент вставки
+program_3d_edit.paste_tool.confirm_label=Подтвердить
+program_3d_edit.paste_tool.confirm_tooltip=Нажмите, чтобы вставить структуру в мир с указанным расположением, поворотом и масштабом.
+program_3d_edit.paste_tool.copy_air_label=Копировать воздух
+program_3d_edit.paste_tool.copy_air_tooltip=Если включено, все воздушные блоки в вставленной структуре будут применены, перезаписывая все существующие блоки. Если отключить, то существующие блоки в этих местах останутся, а воздух не будет скопирован.
+program_3d_edit.paste_tool.copy_lava_label=Копировать лаву
+program_3d_edit.paste_tool.copy_lava_tooltip=Если включено, все блоки лавы в вставленной структуре будут применены, перезаписывая все существующие блоки. Если отключить, то существующие блоки в этих местах останутся, а лава не будет скопирована.
+program_3d_edit.paste_tool.copy_water_label=Копировать воду
+program_3d_edit.paste_tool.copy_water_tooltip=Если включено, все блоки воды в вставленной структуре будут применены, перезаписывая все существующие блоки. Если отключить, то существующие блоки в этих местах останутся, а вода не будет скопирована.
+program_3d_edit.paste_tool.free_rotation_label=Свободное вращение
+program_3d_edit.paste_tool.free_rotation_tooltip=Если флажок не установлен, выделение можно повернуть на угол, кратный 90 градусам. Если флажок установлен, выделение можно поворачивать с шагом в один градус.
 program_3d_edit.paste_tool.location_label=Расположение
 program_3d_edit.paste_tool.location_x_label=x
 program_3d_edit.paste_tool.location_x_tooltip=Положение x, в котором будет размещён центр выделения. Введите число, прокрутите колесо или используйте стрелки для изменения.
@@ -200,19 +212,19 @@ program_3d_edit.paste_tool.location_y_label=y
 program_3d_edit.paste_tool.location_y_tooltip=Положение y, в котором будет размещён центр выделения. Введите число, прокрутите колесо или используйте стрелки для изменения.
 program_3d_edit.paste_tool.location_z_label=z
 program_3d_edit.paste_tool.location_z_tooltip=Положение по z, в котором будет размещён центр выделения. Введите число, прокрутите колесо или используйте стрелки для изменения.
+program_3d_edit.paste_tool.mirror_horizontal_tooltip=Зеркальное отображение выделения по горизонтали относительно направления взгляда камеры.
+program_3d_edit.paste_tool.mirror_vertical_tooltip=Зеркальное отображение выделения по вертикали относительно направления взгляда камеры.
 program_3d_edit.paste_tool.move_selection_label=Переместить выделенное
 program_3d_edit.paste_tool.move_selection_tooltip=Нажмите и удерживайте эту кнопку и используйте элементы управления перемещением для перемещения выделения.
+program_3d_edit.paste_tool.rotate_anti_clockwise_tooltip=Нажмите, чтобы повернуть выделение на 90 градусов против часовой стрелки относительно поворота внешнего вида.
+program_3d_edit.paste_tool.rotate_clockwise_tooltip=Нажмите, чтобы повернуть выделение на 90 градусов по часовой стрелке относительно поворота внешнего вида.
 program_3d_edit.paste_tool.rotation_label=Вращение
-program_3d_edit.paste_tool.free_rotation_label=Свободное вращение
-program_3d_edit.paste_tool.free_rotation_tooltip=Если флажок не установлен, выделение можно повернуть на угол, кратный 90 градусам. Если флажок установлен, выделение можно поворачивать с шагом в один градус.
 program_3d_edit.paste_tool.rotation_x_label=x
 program_3d_edit.paste_tool.rotation_x_tooltip=Угол в градусах по оси x, на который повёрнуто выделение. Обратите внимание, что это ось x модели, которая преобразуется вращением по z и y, поэтому она может не совпадать с глобальной осью x.
 program_3d_edit.paste_tool.rotation_y_label=y
 program_3d_edit.paste_tool.rotation_y_tooltip=Угол в градусах по оси y, на который повёрнуто выделение. Обратите внимание, что это ось y модели, которая преобразуется вращением по z, поэтому она может не совпадать с глобальной осью y.
 program_3d_edit.paste_tool.rotation_z_label=z
 program_3d_edit.paste_tool.rotation_z_tooltip=Угол в градусах по оси z, на который поворачивается выделение.
-program_3d_edit.paste_tool.rotate_anti_clockwise_tooltip=Нажмите, чтобы повернуть выделение на 90 градусов против часовой стрелки относительно поворота внешнего вида.
-program_3d_edit.paste_tool.rotate_clockwise_tooltip=Нажмите, чтобы повернуть выделение на 90 градусов по часовой стрелке относительно поворота внешнего вида.
 program_3d_edit.paste_tool.scale_label=Масштаб
 program_3d_edit.paste_tool.scale_x_label=x
 program_3d_edit.paste_tool.scale_x_tooltip=Масштаб модели по оси x.
@@ -220,31 +232,23 @@ program_3d_edit.paste_tool.scale_y_label=y
 program_3d_edit.paste_tool.scale_y_tooltip=Масштаб модели по оси y.
 program_3d_edit.paste_tool.scale_z_label=z
 program_3d_edit.paste_tool.scale_z_tooltip=Масштаб модели по оси z.
-program_3d_edit.paste_tool.mirror_horizontal_tooltip=Зеркальное отображение выделения по горизонтали относительно направления взгляда камеры.
-program_3d_edit.paste_tool.mirror_vertical_tooltip=Зеркальное отображение выделения по вертикали относительно направления взгляда камеры.
-program_3d_edit.paste_tool.copy_air_label=Копировать воздух
-program_3d_edit.paste_tool.copy_air_tooltip=Если включено, все воздушные блоки в вставленной структуре будут применены, перезаписывая все существующие блоки. Если отключить, то существующие блоки в этих местах останутся, а воздух не будет скопирован.
-program_3d_edit.paste_tool.copy_water_label=Копировать воду
-program_3d_edit.paste_tool.copy_water_tooltip=Если включено, все блоки воды в вставленной структуре будут применены, перезаписывая все существующие блоки. Если отключить, то существующие блоки в этих местах останутся, а вода не будет скопирована.
-program_3d_edit.paste_tool.copy_lava_label=Копировать лаву
-program_3d_edit.paste_tool.copy_lava_tooltip=Если включено, все блоки лавы в вставленной структуре будут применены, перезаписывая все существующие блоки. Если отключить, то существующие блоки в этих местах останутся, а лава не будет скопирована.
-program_3d_edit.paste_tool.confirm_label=Подтвердить
-program_3d_edit.paste_tool.confirm_tooltip=Нажмите, чтобы вставить структуру в мир с указанным расположением, поворотом и масштабом.
 program_3d_edit.paste_tool.zero_scale_message=Одно из значений шкалы имело нулевое значение, поэтому ничего не было скопировано.
 
 ## Инструмент чанк
-program_3d_edit.chunk_tool.min_y=Мин Y
-program_3d_edit.chunk_tool.min_y_tooltip=Минимальная координата y для рисования в виде сверху вниз. Это может быть использовано для просмотра чанка мира и помогает увидеть такие измерения, как недра и пещеры.
-program_3d_edit.chunk_tool.max_y=Макс Y
-program_3d_edit.chunk_tool.max_y_tooltip=Максимальная координата y для рисования в режиме просмотра сверху вниз. Это может быть использовано для просмотра чанка мира и помогает увидеть такие измерения, как недра и пещеры.
 program_3d_edit.chunk_tool.create_chunks=Создать пустые чанки
 program_3d_edit.chunk_tool.create_chunks_tooltip=Создать все чанки в выделении, которые ещё не существуют. Чанки, которые уже существуют, останутся без изменений.
 program_3d_edit.chunk_tool.delete_chunks=Удалить чанки
 program_3d_edit.chunk_tool.delete_chunks_tooltip=Удалить выбранные чанки. При этом будет удалён сам чанк и все содержащиеся в нем данные. При следующей загрузке области в игру чанки будут созданы заново.
+program_3d_edit.chunk_tool.max_y=Макс Y
+program_3d_edit.chunk_tool.max_y_tooltip=Максимальная координата y для рисования в режиме просмотра сверху вниз. Это может быть использовано для просмотра чанка мира и помогает увидеть такие измерения, как недра и пещеры.
+program_3d_edit.chunk_tool.min_y=Мин Y
+program_3d_edit.chunk_tool.min_y_tooltip=Минимальная координата y для рисования в виде сверху вниз. Это может быть использовано для просмотра чанка мира и помогает увидеть такие измерения, как недра и пещеры.
 program_3d_edit.chunk_tool.prune_chunks=Удалить не выбранные чанки
 program_3d_edit.chunk_tool.prune_chunks_tooltip=Удалить все не выбранные чанки. При этом будет удалён сам чанк и все содержащиеся в нем данные. При следующей загрузке области в игру чанки будут созданы заново.
 
 ## Окно Перейти/Телепорт
+program_3d_edit.goto_ui.copy_button_tooltip=Копирование значений x, y и z в буфер обмена в виде "0.0 0.0 0.0" (x, y и z соответственно).
+program_3d_edit.goto_ui.paste_button_tooltip=Вставить ранее скопированную координату во входные данные. Копируемое значение должно состоять из трёх чисел, разделенных пробелами или запятыми.
 program_3d_edit.goto_ui.title=Телепорт
 program_3d_edit.goto_ui.x_label=x:
 program_3d_edit.goto_ui.x_label_tooltip=Координата x камеры. Введите координату, чтобы перейти к этому месту. Ctrl + C, чтобы скопировать координату. Ctrl + V для вставки.
@@ -252,18 +256,16 @@ program_3d_edit.goto_ui.y_label=y:
 program_3d_edit.goto_ui.y_label_tooltip=Координата y камеры. Введите координату, чтобы перейти к этому месту. Ctrl + C, чтобы скопировать координату. Ctrl + V для вставки.
 program_3d_edit.goto_ui.z_label=z:
 program_3d_edit.goto_ui.z_label_tooltip=Координата z камеры. Введите координату, чтобы перейти к этому месту. Ctrl + C, чтобы скопировать координату. Ctrl + V для вставки.
-program_3d_edit.goto_ui.copy_button_tooltip=Копирование значений x, y и z в буфер обмена в виде "0.0 0.0 0.0" (x, y и z соответственно).
-program_3d_edit.goto_ui.paste_button_tooltip=Вставить ранее скопированную координату во входные данные. Копируемое значение должно состоять из трёх чисел, разделенных пробелами или запятыми.
 
 ## Панель файлов
-program_3d_edit.file_ui.version_tooltip=Платформа и версия данных
-program_3d_edit.file_ui.projection_tooltip=Изменить вид
-program_3d_edit.file_ui.location_tooltip=Переместить камеру
-program_3d_edit.file_ui.speed_blocks_per_second=Б/С
-program_3d_edit.file_ui.speed_tooltip=Скорость камеры в блоках в секунду
-program_3d_edit.file_ui.speed_dialog_name=Установить скорость камеры
+program_3d_edit.file_ui.close_tooltip=Закрыть мир
 program_3d_edit.file_ui.dim_tooltip=Выбрать измерение
-program_3d_edit.file_ui.undo_tooltip=Отменить
+program_3d_edit.file_ui.location_tooltip=Переместить камеру
+program_3d_edit.file_ui.projection_tooltip=Изменить вид
 program_3d_edit.file_ui.redo_tooltip=Вернуть
 program_3d_edit.file_ui.save_tooltip=Сохранить изменения
-program_3d_edit.file_ui.close_tooltip=Закрыть мир
+program_3d_edit.file_ui.speed_blocks_per_second=Б/С
+program_3d_edit.file_ui.speed_dialog_name=Установить скорость камеры
+program_3d_edit.file_ui.speed_tooltip=Скорость камеры в блоках в секунду
+program_3d_edit.file_ui.undo_tooltip=Отменить
+program_3d_edit.file_ui.version_tooltip=Платформа и версия данных

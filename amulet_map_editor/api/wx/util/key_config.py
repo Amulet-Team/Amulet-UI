@@ -312,13 +312,21 @@ class KeyCatcher(wx.Dialog):
 
         self._key = ((), "NONE")
 
-        self.Bind(wx.EVT_LEFT_DOWN, self._on_key)
-        self.Bind(wx.EVT_MIDDLE_DOWN, self._on_key)
-        self.Bind(wx.EVT_RIGHT_DOWN, self._on_key)
-        self.Bind(wx.EVT_KEY_DOWN, self._on_key)
-        self.Bind(wx.EVT_MOUSEWHEEL, self._on_key)
-        self.Bind(wx.EVT_MOUSE_AUX1_DOWN, self._on_key)
-        self.Bind(wx.EVT_MOUSE_AUX2_DOWN, self._on_key)
+        panel = wx.Panel(self)
+        panel.SetFocus()
+
+        panel.Bind(wx.EVT_LEFT_DOWN, self._on_key)
+        panel.Bind(wx.EVT_MIDDLE_DOWN, self._on_key)
+        panel.Bind(wx.EVT_RIGHT_DOWN, self._on_key)
+        panel.Bind(wx.EVT_KEY_DOWN, self._on_key)
+        panel.Bind(wx.EVT_MOUSEWHEEL, self._on_key)
+        panel.Bind(wx.EVT_MOUSE_AUX1_DOWN, self._on_key)
+        panel.Bind(wx.EVT_MOUSE_AUX2_DOWN, self._on_key)
+
+        sizer = wx.BoxSizer(wx.VERTICAL)
+        sizer.Add(panel, 1, wx.EXPAND)
+        self.SetSizer(sizer)
+        self.Layout()
 
     def _on_key(self, evt):
         key = serialise_key_event(evt)

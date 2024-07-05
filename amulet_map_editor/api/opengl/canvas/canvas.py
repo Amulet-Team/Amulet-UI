@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Callable
 import logging
 
 import wx
@@ -51,24 +51,23 @@ class BaseCanvas(GLCanvas):
         # Amulet-Team/Amulet-Map-Editor#84
         # Amulet-Team/Amulet-Map-Editor#597
         # Amulet-Team/Amulet-Map-Editor#856
-        context_constructors = [
-            lambda: GLContext(
-                self,
-                ctxAttrs=GLContextAttrs()
-                .PlatformDefaults()
-                .OGLVersion(3, 3)
-                .CoreProfile()
-                .EndList(),
-            ),
-            lambda: GLContext(
-                self,
-                ctxAttrs=GLContextAttrs()
-                .PlatformDefaults()
-                .OGLVersion(2, 1)
-                .CompatibilityProfile()
-                .EndList(),
-            ),
-        ]
+        def gl3() -> GLContext:
+            ctx_attrs = GLContextAttrs()
+            ctx_attrs.PlatformDefaults()
+            ctx_attrs.OGLVersion(3, 3)
+            ctx_attrs.CoreProfile()
+            ctx_attrs.EndList()
+            return GLContext(self, ctxAttrs=ctx_attrs)
+
+        def gl2() -> GLContext:
+            ctx_attrs = GLContextAttrs()
+            ctx_attrs.PlatformDefaults()
+            ctx_attrs.OGLVersion(2, 1)
+            ctx_attrs.CompatibilityProfile()
+            ctx_attrs.EndList()
+            return GLContext(self, ctxAttrs=ctx_attrs)
+
+        context_constructors: list[Callable[[], GLContext]] = [gl3, gl2]
 
         for constructor in context_constructors:
             context = constructor()

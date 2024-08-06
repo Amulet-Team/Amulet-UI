@@ -25,23 +25,12 @@ log = logging.getLogger(__name__)
 # macOS 	~/Library/Application Support/minecraft
 # Linux 	~/.minecraft
 
-
-def get_java_dir():
-    if platform == "win32":
-        return os.path.join(os.getenv("APPDATA"), ".minecraft")
-    elif platform == "darwin":
-        return os.path.expanduser("~/Library/Application Support/minecraft")
-    else:
-        return os.path.expanduser("~/.minecraft")
-
-
-def get_java_saves_dir():
-    return os.path.join(get_java_dir(), "saves")
-
-
-minecraft_world_paths = {lang.get("world.java_platform"): get_java_saves_dir()}
+minecraft_world_paths = {}
 
 if platform == "win32":
+    minecraft_world_paths[lang.get("world.java_platform")] = os.path.join(
+        os.getenv("APPDATA"), ".minecraft", "saves"
+    )
     minecraft_world_paths[lang.get("world.bedrock_platform")] = os.path.join(
         os.getenv("LOCALAPPDATA"),
         "Packages",
@@ -50,6 +39,23 @@ if platform == "win32":
         "games",
         "com.mojang",
         "minecraftWorlds",
+    )
+    minecraft_world_paths[lang.get("world.bedrock_education_platform")] = os.path.join(
+        os.getenv("LOCALAPPDATA"),
+        "Packages",
+        "Microsoft.MinecraftEducationEdition_8wekyb3d8bbwe",
+        "LocalState",
+        "games",
+        "com.mojang",
+        "minecraftWorlds",
+    )
+elif platform == "darwin":
+    minecraft_world_paths[lang.get("world.java_platform")] = os.path.join(
+        os.path.expanduser("~"), "Library", "Application Support", "minecraft", "saves"
+    )
+elif platform == "linux":
+    minecraft_world_paths[lang.get("world.java_platform")] = os.path.join(
+        os.path.expanduser("~"), ".minecraft", "saves"
     )
 
 world_images: Dict[str, Tuple[int, wx.Bitmap, int]] = {}

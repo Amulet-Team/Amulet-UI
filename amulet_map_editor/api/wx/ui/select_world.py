@@ -54,7 +54,7 @@ if platform == "win32":
         "Minecraft Education Edition",
         "games",
         "com.mojang",
-        "minecraftWorlds"
+        "minecraftWorlds",
     )
 elif platform == "darwin":
     minecraft_world_paths[lang.get("world.java_platform")] = os.path.join(

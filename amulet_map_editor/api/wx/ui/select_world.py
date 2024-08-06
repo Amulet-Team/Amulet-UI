@@ -56,6 +56,11 @@ if platform == "win32":
         "com.mojang",
         "minecraftWorlds",
     )
+    minecraft_world_paths[lang.get("world.bedrock_netease")] = os.path.join(
+        os.getenv("APPDATA"),
+        "MinecraftPE_Netease"
+        "minecraftWorlds",
+    )
 elif platform == "darwin":
     minecraft_world_paths[lang.get("world.java_platform")] = os.path.join(
         os.path.expanduser("~"), "Library", "Application Support", "minecraft", "saves"

@@ -64,6 +64,7 @@ world.java_platform=Java
 world.bedrock_platform=Bedrock
 world.bedrock_education_store=Education Edition (Store)
 world.bedrock_education_desktop=Education Edition (Desktop)
+world.bedrock_netease=Bedrock (Netease)
 world.close_world=Close World
 
 # Menu bar

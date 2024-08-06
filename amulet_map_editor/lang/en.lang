@@ -62,6 +62,7 @@ app.browser_open_tooltip=Clicking will open the page in your browser
 
 world.java_platform=Java
 world.bedrock_platform=Bedrock
+world.bedrock_education_platform=Education Edition
 world.close_world=Close World
 
 # Menu bar

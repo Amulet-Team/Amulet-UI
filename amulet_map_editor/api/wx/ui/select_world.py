@@ -58,8 +58,7 @@ if platform == "win32":
     )
     minecraft_world_paths[lang.get("world.bedrock_netease")] = os.path.join(
         os.getenv("APPDATA"),
-        "MinecraftPE_Netease"
-        "minecraftWorlds",
+        "MinecraftPE_Netease" "minecraftWorlds",
     )
 elif platform == "darwin":
     minecraft_world_paths[lang.get("world.java_platform")] = os.path.join(

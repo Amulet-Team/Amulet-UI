@@ -24,91 +24,48 @@
 #SOFTWARE.
 #-- end license --
 
-#本许可证仅适用于此文件。
-
-#-- 开始许可证 --
-#MIT 许可证
-
-#版权所有 (c) 2021 Amulet-Team
-
-#特此免费授予任何获得本软件及相关文档文件（“软件”）副本的个人无限制地使用、复制、修改、合并、发布、分发、授予子许可证和/或出售软件副本的权利，并允许获得软件的人这样做，但须遵守以下条件：
-
-#上述版权声明和本许可通知应包含在软件的所有副本或大部分内容中。
-
-#软件按“现状”提供，不提供任何明示或暗示的担保，包括但不限于适销性、特定用途的适用性和不侵权的担保。在任何情况下，作者或版权持有人均不对因软件或与软件的使用或其他交易有关的任何索赔、损害或其他责任负责，无论是在合同诉讼、侵权诉讼还是其他诉讼中，还是因之产生、与之相关或与之有任何联系。
-#-- 结束许可证 --
-
-
-# Important notes
-## If you want to contribute to the translation of the User Interface (UI), please read the corresponding contribution file located at '/contributing/lang.md'
-## Each translation entry must be written as follows: 'unique.identifier=The text shown in the UI'
-## Unique identifiers are defined by the devs. In order to know what are the existing identifiers, please refer to the 'en.lang' file
-
-# Loading order and region specific translations
-## First the 'en.lang' is loaded to ensure that there is at least something for any given key
-## Then, if the language code contains an "_" symbol (for example "fr_CA"), the lang file for the language section ("fr") will be loaded next ("fr.lang")
-## Finally, if it exists, the region specific language file ("fr_CA.lang") will be loaded which should only contain entries that vary between regions
-## This allows languages that do not vary much between regions to share the same language file to minimise duplication
-
-# Supported features in translation files
-## You can write a comment line by using the "#" symbol as the first (non-space) character of a line. Inline comments are not supported
-## Any "\n" in a translation string will be converted as a new line in the UI
-
-# About the menu bar
-## The "&" symbol is a special character in this context. It will not be shown in the UI but will define the following character as a shortcut when the "alt" key is pressed (warning: accented letters are they own characters (é =/= e))
-## Example: "&File" translates to "File" in the UI, but will allow the user to press "alt+f" to open the corresponding menu
-## More info can be found at: https://docs.wxpython.org/wx.MenuItem.html#wx.MenuItem.SetItemLabel
-
-# About the fstrings
-## The pattern "{variable}" is used in some entries, this pattern allows the app to input values in the text
-## Example: "There are {n} changes" translates to "There are 2 changes" in the UI
-## This pattern must stay in the translated entries for them to work properly
 
 # 重要说明
-## 如果您想为用户界面（UI）的翻译做出贡献，请阅读位于'/contributing/lang.md'的相应贡献文件
-## 每个翻译条目必须按以下方式编写：'unique.identifier=UI中显示的文本'
-## 唯一标识符由开发人员定义。为了了解现有的标识符，请参考'en.lang'文件
+## 如果您想要为用户界面（UI）贡献翻译，请阅读位于 '/contributing/lang.md' 的相应贡献文件
+## 每个翻译条目必须按照以下方式编写：'unique.identifier=在UI中显示的文本'
+## 独特标识由开发人员定义。为了了解现有的标识符，请参考 'en.lang' 文件
 
-# 加载顺序和特定区域的翻译
-## 首先加载'en.lang'以确保任何给定键都至少有一些内容
-## 然后，如果语言代码包含"_"符号（例如"fr_CA"），则会接下来加载语言部分（"fr"）的语言文件（"fr.lang"）
-## 最后，如果存在，将加载特定区域的语言文件（"fr_CA.lang"），该文件应仅包含区域间不同的条目
-## 这允许在区域间差异不大的语言共享相同的语言文件，以减少重复
+# 加载顺序和区域特定翻译
+## 首先加载 'en.lang' 以确保每个给定的键都有至少一个条目
+## 然后，如果语言代码包含“_”符号（例如 "fr_CA"），下一步将加载语言部分的语言文件（"fr"）（"fr.lang"）
+## 最后，如果存在，将加载区域特定的语言文件（"fr_CA.lang"），该文件应仅包含在区域之间有差异的条目
+## 这允许在区域之间变化不大的语言共享相同的语言文件，以减少重复
 
-# 翻译文件中支持的功能
-## 您可以通过在行的第一个（非空格）字符处使用"#"符号来编写注释行。不支持行内注释
-## 翻译字符串中的任何"\n"都将在UI中转换为新行
+# 在翻译文件中支持的功能
+## 您可以使用“＃”符号作为一行的第一个（非空格）字符来编写注释行。不支持内联注释
+## 任何翻译字符串中的“\n”都会在UI中转换为新行
 
 # 关于菜单栏
-## 在此上下文中，"&"符号是一个特殊字符。它不会在UI中显示，但会在按下"alt"键时将随后的字符定义为快捷键（警告：带重音的字母是它们自己的字符（é ≠ e））
-## 示例："&File"在UI中翻译为"File"，但允许用户按"alt+f"打开相应的菜单
-## 更多信息可访问：https://docs.wxpython.org/wx.MenuItem.html#wx.MenuItem.SetItemLabel
+## “＆”符号在这个上下文中是一个特殊字符。它不会显示在UI中，但会在按下“alt”键时将后面的字符定义为快捷键（警告：重音符号是它们自己的字符（é ≠ e））
+## 例如："&文件" 在UI中翻译为 "文件"，但用户可以按下 "alt+f" 来打开相应的菜单
+## 更多信息可以在这里找到：https://docs.wxpython.org/wx.MenuItem.html#wx.MenuItem.SetItemLabel
 
-# 关于f字符串
-## 在某些条目中使用了"{variable}"模式，此模式允许应用程序在文本中输入值
-## 示例："There are {n} changes"在UI中翻译为"There are 2 changes"
-## 为了使翻译条目正常工作，此模式必须保留在翻译条目中
+# 关于变量
+## 某些条目中使用的模式 "{variable}" 允许应用程序在文本中输入值
+## 例如： "有 {n} 个变更" 在UI中翻译为 "有 2 个变更"
+## 这个模式必须保留在翻译的条目中，以使其正常工作
 
-# 元数据
+# 元信息|Meta
 meta.amulet=Amulet
 
-# 共享字符串
-shared.check_console=查看控制台以获取更多详细信息。
+# 共享的字符串|Shared strings
+shared.check_console=在控制台中查看更多详情。
 
-# 应用程序
-app.world_still_used=仍在使用一个世界。请先关闭它
-app.browser_open_tooltip=点击将在浏览器中打开页面
+# 应用|App
+app.world_still_used=有一个世界仍在使用中. 请先关闭它。
+app.browser_open_tooltip=点击后将在浏览器中打开页面。
 
-# 世界
-world.java_platform=Java
-world.bedrock_platform=Bedrock
-world.bedrock_education_store=教育版（商店）
-world.bedrock_education_desktop=教育版（桌面）
-world.bedrock_netease=Bedrock（网易）
+world.java_platform=Java版
+world.bedrock_platform=基岩版
 world.close_world=关闭世界
 
 # 菜单栏
-## 屏幕顶部的菜单
+## 显示在屏幕顶部的菜单
 menu_bar.file.menu_name=&文件
 menu_bar.file.open_world=打开世界
 menu_bar.file.close_world=关闭世界
@@ -117,197 +74,194 @@ menu_bar.options.menu_name=&选项
 menu_bar.help.menu_name=&帮助
 
 # 主菜单
-## 开始屏幕
+## 启动屏幕
 main_menu.tab_name=主菜单
 main_menu.open_world=打开世界
 main_menu.user_manual=用户手册
 main_menu.bug_tracker=错误跟踪器
 main_menu.discord=Amulet Discord
-main_menu.our_sponsors=我们的赞助商
-main_menu.sponsor_link=(赞助我们，让您的名字出现在这里)
 
 # 语言选择
-language_select.title=选择语言
-language_select.help=从下面的列表中选择要在Amulet中使用的语言。
+language_select.title=语言选择
+language_select.help=从下面的列表中选择在Amulet中使用的语言。
 language_select.contribute=如果您想修复或添加翻译，请点击这里。
 
 # 警告对话框
 warning_dialog.title=欢迎使用Amulet
-warning_dialog.content=您好，欢迎使用Amulet。\n\n我们建议在Amulet中打开世界之前先备份您的世界。\n\n我们努力确保Amulet不会损坏世界，但保存格式没有文档记录且不断变化，有时我们也会出现错误。\n\n出于这些原因，我们仅正式支持经过我们测试的完整版本。\nJava快照、Bedrock测试版和实验性功能可能可以工作，但未经测试，因此不正式支持。\n\n目前不支持实体，且项目仅在同一平台内支持。\n如果您发现需要添加的功能或需要修复的错误，请在我们的错误跟踪器中报告。\n在创建新工单之前，请使用搜索工具查看是否已有人报告过。\n\n如果您是新手，我们建议您阅读用户手册以熟悉程序。\n\n- Amulet团队
-warning_dialog.do_not_show_again=不再显示
-warning_dialog.i_understand=我了解了
+warning_dialog.content=你好, 欢迎使用Amulet.\n\n我们建议您在打开您需要修改的地图之前先进行备份.\n\n我们尽力确保 Amulet 不会损毁地图, 但是所保存的格式没有文档记录, 并且在不断变化, 有时我们会出错.\n\n出于这些原因, 我们只支持已经过测试的完整正式版本.\nMinecraft Java版快照、Bedrock测试版和实验功能可能在Amulet中有效, 但未经测试, 因此不受Amulet官方支持.\n\n当前暂不支持实体(entities), 物品(items)仅在与原地图相同平台内支持 (例如需要修改的地图为Java平台版本, 仅支持输出时仍为Java版平台的地图, 输出为基岩版时则可能导致地图物品出错, 不受到官方支持).\n如果您发现需要添加的功能或Amulet存在需要修复的Bug, 请在编辑器主菜单选择 “Bug反馈” 前往提交问题反馈.\n在您创建新反馈前, 请先搜索该问题是否已经被其他人所报告.\n\n如果您第一次使用本工具, 我们推荐您先阅读官方 “帮助手册” 以熟悉本程序的操作流程.\n\n- Amulet团队 致上
+warning_dialog.do_not_show_again=不再显示此信息
+warning_dialog.i_understand=我已了解
 
 # 更新检查
-## 当Amulet有新版本可用时显示的窗口
-update_check.newer_version_released=Amulet的新版本已发布！
+## 当有新版本的Amulet可用时显示的窗口
+update_check.newer_version_released=Amulet有新版本发布！
 update_check.new_version=新版本：
 update_check.current_version=您的版本：
-update_check.update=转到下载页面
-update_check.ok=确定
+update_check.update=前往下载页面
+update_check.ok=好的
 
 # 选择世界
 ## 选择要打开的世界时显示的窗口
 select_world.title=选择世界
-select_world.open_world_warning=请在Amulet中打开之前，先在游戏中和其他工具中关闭世界。
+select_world.open_world_warning=在打开Amulet之前，请先在游戏和其他工具中关闭世界。
 select_world.open_world_button=打开其他世界
 select_world.open_world_dialogue=选择Minecraft世界目录
 select_world.select_directory_failed=无法打开目录！
 select_world.recent_worlds=最近打开的世界
-select_world.no_loader_found=无法为此世界找到加载器。
+select_world.no_loader_found=找不到此世界的加载器。
 select_world.loading_world_failed=加载世界时出错。
 
 # 关于
 ## 打开世界时的默认程序
 program_about.tab_name=关于
 program_about.currently_opened_world=当前打开的世界：
-program_about.choose_from_options=从左侧的选项中选择您想要执行的操作。\n您可以随时在这些选项之间切换。
+program_about.choose_from_options=从左侧的选项中选择您想要做的事情。\n您随时可以在这些选项之间切换。
 
 # 转换
-## 用于转换世界的程序
+## 用来转换世界的程序
 program_convert.tab_name=转换
 program_convert.convert_button=转换
-program_convert.input_world=输入世界：
-program_convert.output_world=输出世界：
-program_convert.select_output_world=选择输出世界
+program_convert.input_world=输入世界:
+program_convert.output_world=输出世界:
+program_convert.select_output_world=选择输出的世界
 program_convert.input_output_must_different=输入和输出世界必须不同！
-program_convert.select_before_converting=在转换之前请选择一个世界！
+program_convert.select_before_converting=你必须选择一个用于转换的世界!
 program_convert.conversion_completed=世界转换完成
 
 ## 菜单栏
-program_convert.menu_bar.help.user_guide=用户指南（在线）
+program_convert.menu_bar.help.user_guide=用户指南 (在线版)
 
 # 3D 编辑器
-## 使用3D查看器编辑世界的程序
+## 用于使用 3D 视图器编辑世界的程序
 program_3d_edit.tab_name=3D 编辑器
 
 ## 画布
-program_3d_edit.canvas.please_wait=请等待渲染器加载
-program_3d_edit.canvas.downloading_bedrock_vanilla_resource_pack=正在下载Bedrock原版资源包
-program_3d_edit.canvas.downloading_java_vanilla_resource_pack=正在下载Java原版资源包
-program_3d_edit.canvas.java_rp_failed=无法下载最新的Java资源包。
-program_3d_edit.canvas.java_rp_failed_default=请检查您的网络连接并重启Amulet。
-program_3d_edit.canvas.java_rp_failed_mac_certificates=未安装访问互联网的证书。\n运行位于“应用程序/Python 3.x”中的“Install Certificates.command”程序。
+program_3d_edit.canvas.please_wait=渲染器正在初始化, 请稍作等待
+program_3d_edit.canvas.downloading_bedrock_vanilla_resource_pack=正在下载基岩版纯净资源包
+program_3d_edit.canvas.downloading_java_vanilla_resource_pack=正在下载Java版纯净资源包
+program_3d_edit.canvas.java_rp_failed=无法下载最新版本的Java版纯净资源包.
+program_3d_edit.canvas.java_rp_failed_default=请检查你的网络连接或重启Amulet.
+program_3d_edit.canvas.java_rp_failed_mac_certificates=未安装访问Internet的证书. \n运行 "Applications/Python 3.x" 中的 "Install Certificates.command" 程序.
 program_3d_edit.canvas.loading_resource_packs=正在加载资源包
-program_3d_edit.canvas.retry_download=资源包下载失败。您想重试吗？
-program_3d_edit.canvas.creating_texture_atlas=正在创建纹理图集
+program_3d_edit.canvas.creating_texture_atlas=正在创建纹理
 program_3d_edit.canvas.setting_up_renderer=正在设置渲染器
 
 ## 菜单栏
 program_3d_edit.menu_bar.file.save=保存
-program_3d_edit.menu_bar.edit.menu_name=编辑(&E)
+program_3d_edit.menu_bar.edit.menu_name=&编辑
 program_3d_edit.menu_bar.edit.undo=撤销
 program_3d_edit.menu_bar.edit.redo=重做
 program_3d_edit.menu_bar.edit.cut=剪切
 program_3d_edit.menu_bar.edit.copy=复制
 program_3d_edit.menu_bar.edit.paste=粘贴
-program_3d_edit.menu_bar.edit.delete=删除方块
+program_3d_edit.menu_bar.edit.delete=删除
 program_3d_edit.menu_bar.edit.goto=前往
 program_3d_edit.menu_bar.edit.select_all=全选
-program_3d_edit.menu_bar.options.controls=控制项...
-program_3d_edit.menu_bar.options.options=选项...
-program_3d_edit.menu_bar.help.user_guide=用户指南（在线）
+program_3d_edit.menu_bar.options.controls=控制...
+program_3d_edit.menu_bar.options.options=其他选项...
+program_3d_edit.menu_bar.help.user_guide=用户指南（在线版）
 
 ## 选择工具
-program_3d_edit.select_tool.delete_button=删除方块
-program_3d_edit.select_tool.delete_button_tooltip=删除选定区域内的方块。
+program_3d_edit.select_tool.delete_button=删除
+program_3d_edit.select_tool.delete_button_tooltip=删除选中区域内的方块.
 program_3d_edit.select_tool.copy_button=复制
-program_3d_edit.select_tool.copy_button_tooltip=将选定区域复制到稍后粘贴。可以粘贴到任何世界和维度。
+program_3d_edit.select_tool.copy_button_tooltip=复制选中区域内的方块以用于之后粘贴. 可以被粘贴到任何世界和维度中.
 program_3d_edit.select_tool.cut_button=剪切
-program_3d_edit.select_tool.cut_button_tooltip=将选定区域复制到稍后粘贴并删除。可以粘贴到任何世界和维度。
+program_3d_edit.select_tool.cut_button_tooltip=剪切选中区域内的方块以用于之后粘贴. 可以被粘贴到任何世界和维度中.
 program_3d_edit.select_tool.paste_button=粘贴
-program_3d_edit.select_tool.paste_button_tooltip=将之前复制或剪切的区域粘贴到世界中。
+program_3d_edit.select_tool.paste_button_tooltip=粘贴一个先前复制或剪切的区域到世界中.
 program_3d_edit.select_tool.scroll_point_x1=x1
 program_3d_edit.select_tool.scroll_point_y1=y1
 program_3d_edit.select_tool.scroll_point_z1=z1
 program_3d_edit.select_tool.scroll_point_x2=x2
 program_3d_edit.select_tool.scroll_point_y2=y2
 program_3d_edit.select_tool.scroll_point_z2=z2
-program_3d_edit.select_tool.scroll_point_x1_tooltip=设置活动框绿色角的x坐标。键入数字或在悬停时滚动滚轮。
-program_3d_edit.select_tool.scroll_point_y1_tooltip=设置活动框绿色角的y坐标。键入数字或在悬停时滚动滚轮。
-program_3d_edit.select_tool.scroll_point_z1_tooltip=设置活动框绿色角的z坐标。键入数字或在悬停时滚动滚轮。
-program_3d_edit.select_tool.scroll_point_x2_tooltip=设置活动框蓝色角的x坐标。键入数字或在悬停时滚动滚轮。
-program_3d_edit.select_tool.scroll_point_y2_tooltip=设置活动框蓝色角的y坐标。键入数字或在悬停时滚动滚轮。
-program_3d_edit.select_tool.scroll_point_z2_tooltip=设置活动框蓝色角的z坐标。键入数字或在悬停时滚动滚轮。
+program_3d_edit.select_tool.scroll_point_x1_tooltip=设置选中区块中绿色边缘的x坐标. 在悬停时输入一个数字或使用鼠标滚轮以及右侧的上下箭头进行调整.
+program_3d_edit.select_tool.scroll_point_y1_tooltip=设置选中区块中绿色边缘的y坐标. 在悬停时输入一个数字或使用鼠标滚轮以及右侧的上下箭头进行调整.
+program_3d_edit.select_tool.scroll_point_z1_tooltip=设置选中区块中绿色边缘的z坐标. 在悬停时输入一个数字或使用鼠标滚轮以及右侧的上下箭头进行调整.
+program_3d_edit.select_tool.scroll_point_x2_tooltip=设置选中区块中蓝色边缘的x坐标. 在悬停时输入一个数字或使用鼠标滚轮以及右侧的上下箭头进行调整.
+program_3d_edit.select_tool.scroll_point_y2_tooltip=设置选中区块中蓝色边缘的y坐标. 在悬停时输入一个数字或使用鼠标滚轮以及右侧的上下箭头进行调整.
+program_3d_edit.select_tool.scroll_point_z2_tooltip=设置选中区块中蓝色边缘的z坐标. 在悬停时输入一个数字或使用鼠标滚轮以及右侧的上下箭头进行调整.
 program_3d_edit.select_tool.box_size_selector_fstring=dx={x},dy={y},dz={z}
-program_3d_edit.select_tool.box_size_selector_tooltip=使用Minecraft体积选择器符号表示的活动选择区域的形状。
-program_3d_edit.select_tool.box_size_tooltip=活动选择框的大小（以方块为单位）。
-program_3d_edit.select_tool.button_point1=移动点1
-program_3d_edit.select_tool.button_point1_tooltip=按下并按住此按钮，然后使用移动控件来移动绿色选择点。
-program_3d_edit.select_tool.button_point2=移动点2
-program_3d_edit.select_tool.button_point2_tooltip=按下并按住此按钮，然后使用移动控件来移动蓝色选择点。
-program_3d_edit.select_tool.button_selection_box=移动框
-program_3d_edit.select_tool.button_selection_box_tooltip=按下并按住此按钮，然后使用移动控件来移动活动框。
+program_3d_edit.select_tool.box_size_selector_tooltip=当前Minecraft区块选择器选中的形状.
+program_3d_edit.select_tool.box_size_tooltip=当前选择框的尺寸大小, 以块为单位.
+program_3d_edit.select_tool.button_point1=移动坐标1
+program_3d_edit.select_tool.button_point1_tooltip=按住这个按钮并使用移动键(默认为WASD, 空格和shift)移动绿色选中区块的坐标.
+program_3d_edit.select_tool.button_point2=移动坐标2
+program_3d_edit.select_tool.button_point2_tooltip=按住这个按钮并使用移动键(默认为WASD, 空格和shift)移动蓝色选中区块的坐标.
+program_3d_edit.select_tool.button_selection_box=移动选择框
+program_3d_edit.select_tool.button_selection_box_tooltip=按住这个按钮并使用移动键(默认为WASD, 空格和shift)移动选中区块的坐标.
 
 ## 粘贴工具
 program_3d_edit.paste_tool.location_label=位置
 program_3d_edit.paste_tool.location_x_label=x
-program_3d_edit.paste_tool.location_x_tooltip=选择中心将放置的x位置。可以键入数字、悬停时滚动滚轮或使用箭头键来更改。
+program_3d_edit.paste_tool.location_x_tooltip=选中区域将会被放置的中心位置的x坐标. 输入一个数字, 或使用鼠标滚轮以及右侧箭头来改变数值.
 program_3d_edit.paste_tool.location_y_label=y
-program_3d_edit.paste_tool.location_y_tooltip=选择中心将放置的y位置。可以键入数字、悬停时滚动滚轮或使用箭头键来更改。
+program_3d_edit.paste_tool.location_y_tooltip=选中区域将会被放置的中心位置的y坐标. 输入一个数字, 或使用鼠标滚轮以及右侧箭头来改变数值.
 program_3d_edit.paste_tool.location_z_label=z
-program_3d_edit.paste_tool.location_z_tooltip=选择中心将放置的z位置。可以键入数字、悬停时滚动滚轮或使用箭头键来更改。
-program_3d_edit.paste_tool.move_selection_label=移动选择
-program_3d_edit.paste_tool.move_selection_tooltip=按下并按住此按钮，然后使用移动控件来移动选择区域。
+program_3d_edit.paste_tool.location_z_tooltip=选中区域将会被放置的中心位置的z坐标. 输入一个数字, 或使用鼠标滚轮以及右侧箭头来改变数值.
+program_3d_edit.paste_tool.move_selection_label=移动选中区域
+program_3d_edit.paste_tool.move_selection_tooltip=按住这个按钮并使用移动键(默认为WASD, 空格和shift)移动选中区块.
 program_3d_edit.paste_tool.rotation_label=旋转
 program_3d_edit.paste_tool.free_rotation_label=自由旋转
-program_3d_edit.paste_tool.free_rotation_tooltip=如果未勾选，则选择区域可以按90度的倍数进行旋转。如果勾选，则选择区域可以按单度增量进行旋转。
+program_3d_edit.paste_tool.free_rotation_tooltip=如果不勾选, 选中区块将以90度为单位进行旋转. 如果勾选, 选中区块将以1度为单位进行旋转
 program_3d_edit.paste_tool.rotation_x_label=x
-program_3d_edit.paste_tool.rotation_x_tooltip=选择区域在x轴（模型x轴，受z和y旋转影响，因此可能与全局x轴不匹配）上旋转的角度（以度为单位）。
+program_3d_edit.paste_tool.rotation_x_tooltip=选中区块在x轴上被旋转的角度. 注意这是模型的x轴, 它受到z轴和y轴旋转的影响, 所以这可能与全局的x轴不一致.
 program_3d_edit.paste_tool.rotation_y_label=y
-program_3d_edit.paste_tool.rotation_y_tooltip=选择区域在y轴（模型y轴，受z旋转影响，因此可能与全局y轴不匹配）上旋转的角度（以度为单位）。
+program_3d_edit.paste_tool.rotation_y_tooltip=选中区块在y轴上被旋转的角度. 注意这是模型的y轴, 它受到z轴旋转的影响, 所以这可能与全局的y轴不一致.
 program_3d_edit.paste_tool.rotation_z_label=z
-program_3d_edit.paste_tool.rotation_z_tooltip=选择区域在z轴上旋转的角度（以度为单位）。
-program_3d_edit.paste_tool.rotate_anti_clockwise_tooltip=点击以相对于查看旋转方向逆时针旋转选择区域90度。
-program_3d_edit.paste_tool.rotate_clockwise_tooltip=点击以相对于查看旋转方向顺时针旋转选择区域90度。
-program_3d_edit.paste_tool.scale_label=缩放
+program_3d_edit.paste_tool.rotation_z_tooltip=选中区块在Z轴上被旋转的角度.
+program_3d_edit.paste_tool.rotate_anti_clockwise_tooltip=点击此处将选中区块逆时针旋转90度.
+program_3d_edit.paste_tool.rotate_clockwise_tooltip=点击此处将选中区块顺时针旋转90度.
+program_3d_edit.paste_tool.scale_label=比例
 program_3d_edit.paste_tool.scale_x_label=x
-program_3d_edit.paste_tool.scale_x_tooltip=模型在x轴上的缩放比例。
+program_3d_edit.paste_tool.scale_x_tooltip=模型在x轴上的比例.
 program_3d_edit.paste_tool.scale_y_label=y
-program_3d_edit.paste_tool.scale_y_tooltip=模型在y轴上的缩放比例。
+program_3d_edit.paste_tool.scale_y_tooltip=模型在y轴上的比例.
 program_3d_edit.paste_tool.scale_z_label=z
-program_3d_edit.paste_tool.scale_z_tooltip=模型在z轴上的缩放比例。
-program_3d_edit.paste_tool.mirror_horizontal_tooltip=相对于摄像机查看的方向水平镜像选择区域。
-program_3d_edit.paste_tool.mirror_vertical_tooltip=相对于摄像机查看的方向垂直镜像选择区域。
-program_3d_edit.paste_tool.copy_air_label=粘贴空气
-program_3d_edit.paste_tool.copy_air_tooltip=如果启用，则粘贴结构中的所有空气块将覆盖现有块。如果禁用，则这些位置的现有块将保持不变，且不会复制空气。
-program_3d_edit.paste_tool.copy_water_label=粘贴水
-program_3d_edit.paste_tool.copy_water_tooltip=如果启用，则粘贴结构中的所有水块将覆盖现有块。如果禁用，则这些位置的现有块将保持不变，且不会复制水。
-program_3d_edit.paste_tool.copy_lava_label=粘贴岩浆
-program_3d_edit.paste_tool.copy_lava_tooltip=如果启用，则粘贴结构中的所有岩浆块将覆盖现有块。如果禁用，则这些位置的现有块将保持不变，且不会复制岩浆。
+program_3d_edit.paste_tool.scale_z_tooltip=模型在z轴上的比例.
+program_3d_edit.paste_tool.mirror_horizontal_tooltip=参照摄像头的方向, 水平镜面翻转选中的区块.
+program_3d_edit.paste_tool.mirror_vertical_tooltip=参照摄像头的方向, 垂直镜面翻转选中的区块.
+program_3d_edit.paste_tool.copy_air_label=复制空气
+program_3d_edit.paste_tool.copy_air_tooltip=如果启用, 被粘贴的区块中的所有空气方块将被保留并覆盖任何现有的方块. 如果禁用, 这些位置的现有方块将被保留, 空气将不会被复制.
+program_3d_edit.paste_tool.copy_water_label=复制水
+program_3d_edit.paste_tool.copy_water_tooltip=如果启用, 被粘贴的区块中的所有水方块将被保留并覆盖任何现有的方块. 如果禁用, 这些位置的现有方块将被保留, 水将不会被复制.
+program_3d_edit.paste_tool.copy_lava_label=复制岩浆
+program_3d_edit.paste_tool.copy_lava_tooltip==如果启用, 被粘贴的区块中的所有岩浆方块将被保留并覆盖任何现有的方块. 如果禁用, 这些位置的现有方块将被保留, 岩浆将不会被复制.
 program_3d_edit.paste_tool.confirm_label=确认
-program_3d_edit.paste_tool.confirm_tooltip=点击以将结构粘贴到世界的指定位置、旋转和缩放。
-program_3d_edit.paste_tool.zero_scale_message=其中一个缩放值为零，因此没有复制任何内容。
+program_3d_edit.paste_tool.confirm_tooltip=点击此处将模板旋转, 并按比例粘贴到世界中的指定位置.
+program_3d_edit.paste_tool.zero_scale_message=比例中的一个数值为0, 所有没有任何内容被复制.
 
 ## 区块工具
-program_3d_edit.chunk_tool.min_y=最小Y值
-program_3d_edit.chunk_tool.min_y_tooltip=在顶视图中绘制时的最小y坐标。这可用于查看世界的一个切片，有助于观察如下界和洞穴等维度。
-program_3d_edit.chunk_tool.max_y=最大Y值
-program_3d_edit.chunk_tool.max_y_tooltip=在顶视图中绘制时的最大y坐标。这可用于查看世界的一个切片，有助于观察如下界和洞穴等维度。
-program_3d_edit.chunk_tool.create_chunks=创建空区块
-program_3d_edit.chunk_tool.create_chunks_tooltip=在所选区域内创建所有尚不存在的区块。已存在的区块将保持不变。
-program_3d_edit.chunk_tool.delete_chunks=删除区块
-program_3d_edit.chunk_tool.delete_chunks_tooltip=删除所选的区块。这将删除实际的区块及其包含的所有数据。下次在游戏中加载该区域时，将重新创建这些区块。
-program_3d_edit.chunk_tool.prune_chunks=删除未选中的区块
-program_3d_edit.chunk_tool.prune_chunks_tooltip=删除所有未选中的区块。这将删除实际的区块及其包含的所有数据。下次在游戏中加载该区域时，将重新创建这些区块。
+program_3d_edit.chunk_tool.min_y=最小y坐标
+program_3d_edit.chunk_tool.min_y_tooltip=在自上而下的俯视图中绘制的最低的y坐标. 该功能可以用来检视世界的一个切片, 并帮助查看像地狱和洞穴这样的区域.
+program_3d_edit.chunk_tool.max_y=最大y坐标
+program_3d_edit.chunk_tool.max_y_tooltip=在自上而下的俯视图中绘制的最高的y坐标. 该功能可以用来检视世界的一个切片, 并帮助查看像地狱和洞穴这样的区域.
+program_3d_edit.chunk_tool.create_chunks=创建空白区块
+program_3d_edit.chunk_tool.create_chunks_tooltip=创建选择中尚未存在的区块. 已经存在的区块将保持不变.
+program_3d_edit.chunk_tool.delete_chunks=删除选中区块
+program_3d_edit.chunk_tool.delete_chunks_tooltip=删除选中的区块. 该操作将会删除实际的区块和其中包含的所有数据. 下次你在游戏中加载该区域时, 游戏将会重新创建这些区块.
+program_3d_edit.chunk_tool.prune_chunks=仅保留选中区块
+program_3d_edit.chunk_tool.prune_chunks_tooltip=删除所有未被选中的区块. 该操作将会删除实际的区块和其中包含的所有数据. 下次你在游戏中加载该区域时, 游戏将会重新创建这些区块.
 
-## 传送/瞬移窗口
+## 传送|Goto/Teleport window
 program_3d_edit.goto_ui.title=传送
 program_3d_edit.goto_ui.x_label=x:
-program_3d_edit.goto_ui.x_label_tooltip=相机的x坐标。输入坐标以传送到指定位置。Ctrl + C复制坐标，Ctrl + V粘贴。
+program_3d_edit.goto_ui.x_label_tooltip=摄像机的x坐标. 输入一个坐标以前往该位置. 按 Ctrl+C 复制该坐标, Ctrl+V 粘贴.
 program_3d_edit.goto_ui.y_label=y:
-program_3d_edit.goto_ui.y_label_tooltip=相机的y坐标。输入坐标以传送到指定位置。Ctrl + C复制坐标，Ctrl + V粘贴。
+program_3d_edit.goto_ui.y_label_tooltip=摄像机的y坐标. 输入一个坐标以前往该位置. 按 Ctrl+C 复制该坐标, Ctrl+V 粘贴.
 program_3d_edit.goto_ui.z_label=z:
-program_3d_edit.goto_ui.z_label_tooltip=相机的z坐标。输入坐标以传送到指定位置。Ctrl + C复制坐标，Ctrl + V粘贴。
-program_3d_edit.goto_ui.copy_button_tooltip=将x、y和z值以“0.0 0.0 0.0”（分别为x、y和z）的形式复制到剪贴板
-program_3d_edit.goto_ui.paste_button_tooltip=将之前复制的坐标粘贴到输入框中。复制的值必须是三个由空格或逗号分隔的数字。
+program_3d_edit.goto_ui.z_label_tooltip=摄像机的z坐标. 输入一个坐标以前往该位置. 按 Ctrl+C 复制该坐标, Ctrl+V 粘贴.
+program_3d_edit.goto_ui.copy_button_tooltip=以 "0.0 0.0 0.0" (分别为x、y和z)的格式将x, y和z的值复制到剪贴板上.
+program_3d_edit.goto_ui.paste_button_tooltip=将先前复制的坐标粘贴到输入栏中. 复制的值必须是三个数字, 用空格或逗号隔开.
 
 ## 文件面板
-program_3d_edit.file_ui.version_tooltip=世界的平台和数据版本
-program_3d_edit.file_ui.projection_tooltip=改变视图
-program_3d_edit.file_ui.location_tooltip=移动相机
-program_3d_edit.file_ui.speed_blocks_per_second=bps
-program_3d_edit.file_ui.speed_tooltip=相机速度（每秒移动的方块数）
-program_3d_edit.file_ui.speed_dialog_name=设置相机速度
+program_3d_edit.file_ui.version_tooltip=世界的平台和版本
+program_3d_edit.file_ui.projection_tooltip=更改视图
+program_3d_edit.file_ui.location_tooltip=移动摄像机
+program_3d_edit.file_ui.speed_blocks_per_second=方块/秒
+program_3d_edit.file_ui.speed_tooltip=摄像机速度（每秒方块数）
+program_3d_edit.file_ui.speed_dialog_name=设置摄像机速度
 program_3d_edit.file_ui.dim_tooltip=选择维度
 program_3d_edit.file_ui.undo_tooltip=撤销
 program_3d_edit.file_ui.redo_tooltip=重做

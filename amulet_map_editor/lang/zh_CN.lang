@@ -135,7 +135,7 @@ language_select.contribute=如果您想修复或添加翻译，请点击这里�
 warning_dialog.title=欢迎使用Amulet
 warning_dialog.content=您好，欢迎使用Amulet。\n\n我们建议在Amulet中打开世界之前先备份您的世界。\n\n我们努力确保Amulet不会损坏世界，但保存格式没有文档记录且不断变化，有时我们也会出现错误。\n\n出于这些原因，我们仅支持经过测试的正式版Minecraft。\nJava快照、Bedrock测试版和实验性功能可能可以工作，但未经测试，因此不正式支持。\n\n目前不支持实体，且项目仅在同一平台内支持。\n如果您发现需要添加的功能或需要修复的错误，请在我们的错误跟踪器中报告。\n在创建新议题之前，请使用搜索工具查看是否已有人报告过。\n\n如果您是新手，我们建议您阅读用户手册以熟悉程序。\n\n- Amulet团队
 warning_dialog.do_not_show_again=不再显示
-warning_dialog.i_understand=我了解了
+warning_dialog.i_understand=我已了解
 
 # 更新检查
 ## 当Amulet有新版本可用时显示的窗口

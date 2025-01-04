@@ -62,6 +62,9 @@ app.browser_open_tooltip=Nháy chuột vào sẽ mở trang này trong trình du
 
 world.java_platform=Java
 world.bedrock_platform=Bedrock
+world.bedrock_education_store=Education Edition (Store)
+world.bedrock_education_desktop=Education Edition (Desktop)
+world.bedrock_netease=Bedrock (Netease)
 world.close_world=Đóng thế giới
 
 # Menu bar
@@ -79,7 +82,9 @@ main_menu.tab_name=Bảng chọn chính
 main_menu.open_world=Mở thế giới
 main_menu.user_manual=Hướng dẫn sử dụng
 main_menu.bug_tracker=Trình theo dõi lỗi
-main_menu.discord=Discord của Amulet
+main_menu.discord=Discord
+main_menu.our_sponsors=Các nhà tài trợ
+main_menu.sponsor_link=(Tài trợ chúng tôi để tên bạn xuất hiện ở đây)
 
 # Language Select
 language_select.title=Lựa chọn ngôn ngữ
@@ -94,7 +99,7 @@ warning_dialog.i_understand=Tôi đã hiểu
 
 # Update check
 ## The window displayed when a newer version of Amulet is available
-update_check.newer_version_released=Một phiên bản mới của Amulet đã được ra mắt!
+update_check.newer_version_released=Một phiên bản mới của Amulet đã được phát hành!
 update_check.new_version=Phiên bản mới:
 update_check.current_version=Phiên bản của bạn:
 update_check.update=Đi đến trang tải xuống
@@ -143,6 +148,7 @@ program_3d_edit.canvas.java_rp_failed=Không thể tải xuống gói tài nguy�
 program_3d_edit.canvas.java_rp_failed_default=Hãy kiểm tra kết nối Internet và khởi động lại Amulet.
 program_3d_edit.canvas.java_rp_failed_mac_certificates=Chứng chỉ để kết nối Internet đã không được cài đặt.\nHãy chạy chương trình "Install Certificates.command" nằm ở thư mục "Applications/Python 3.x".
 program_3d_edit.canvas.loading_resource_packs=Đang tải gói tài nguyên
+program_3d_edit.canvas.retry_download=Không thể tải xuống gói tài nguyên. Bạn có muốn thử lại không?
 program_3d_edit.canvas.creating_texture_atlas=Đang tạo tập hình kết cấu
 program_3d_edit.canvas.setting_up_renderer=Đang thiết lập trình kết xuất
 

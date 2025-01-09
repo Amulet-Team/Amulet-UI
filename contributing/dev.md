@@ -2,6 +2,11 @@
 
 This is intended for developers wishing to contribute code to the project.
 
+### License
+In order to contribute to the project you must agree that your submission can be used, hosted
+and redistributed for use by others under the terms of the [license](../LICENSE) for the project.
+Upon creating a pull request you will be asked to confirm that you acknowledge this.
+
 ### Branch Naming
 A branch must be created in order to contribute code to the project.
 Unless you have permissions to create branches in Amulet-Team you will first need to [fork the repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
